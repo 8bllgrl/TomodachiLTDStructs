@@ -1,0 +1,10 @@
+- thunk_FUN to be ignored in export_findings
+- sort by address instead of alphabetical
+- player bond system methods guessing
+
+------------------------------------------
+Files changed:
+ data/findings.json         | 38759 +++++++++++++++++++++++++++++++++++--------
+ scripts/export_findings.py |    24 +-
+ scripts/import_findings.py |     7 +-
+ 3 files changed, 31913 insertions(+), 6877 deletions(-)
