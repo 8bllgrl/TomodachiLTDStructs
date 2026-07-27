@@ -4,8 +4,8 @@ export_findings.py
 Ghidra script (run via Script Manager) that walks the CURRENTLY OPEN program
 and exports:
   - every function you've renamed away from Ghidra's auto-generated names
-    (FUN_/DAT_/PTR_/LAB_/SUB_), along with a wildcarded byte signature,
-    return type, parameters, calling convention, and comments
+    (FUN_/DAT_/PTR_/LAB_/SUB_/UNK_/switchD_/thunk_FUN_/thunk_fun), along with a
+    wildcarded byte signature, return type, parameters, calling convention, and comments
   - every user-defined structure/enum/typedef in the program's data type
     manager
 
@@ -27,7 +27,7 @@ import json
 from ghidra.program.model.data import Structure
 from ghidra.util.task import ConsoleTaskMonitor
 
-DEFAULT_NAME_PREFIXES = ("FUN_", "DAT_", "PTR_", "LAB_", "SUB_", "UNK_", "switchD_")
+DEFAULT_NAME_PREFIXES = ("FUN_", "DAT_", "PTR_", "LAB_", "SUB_", "UNK_", "switchD_", "thunk_FUN_", "thunk_fun")
 MAX_SIG_BYTES = 64          # how many bytes of a function to fingerprint
 MAX_SIG_INSTRUCTIONS = 24   # safety cap on instruction count
 
@@ -95,7 +95,8 @@ def build_signature(func):
 def export_functions():
     entries = {}
     fm = currentProgram.getFunctionManager()
-    for func in fm.getFunctions(True):
+    base = currentProgram.getImageBase().getOffset()
+    for func in fm.getFunctions(True):  # True = ascending address order
         name = func.getName()
         if not is_user_named(name):
             continue
@@ -107,6 +108,11 @@ def export_functions():
             continue
 
         entry = {
+            # Informational only -- NOT used for matching on import (that's
+            # signature-based). Included so the exported file sorts and
+            # reads in address order, and so humans reviewing a diff/PR can
+            # see roughly where in the binary an entry lives.
+            "address_offset": "0x%x" % (func.getEntryPoint().getOffset() - base),
             "signature": sig,
             "return_type": str(func.getReturnType()),
             "calling_convention": str(func.getCallingConventionName()),
@@ -165,7 +171,13 @@ def main():
     out_path = out_dir.getAbsolutePath() + "/findings.json"
     f = open(out_path, "w")
     try:
-        f.write(json.dumps(data, sort_keys=True, indent=2))
+        # sort_keys intentionally OFF -- functions are inserted in ascending
+        # address order (see export_functions), and we want that order to
+        # survive into the file so diffs/PRs cluster by binary region
+        # instead of scattering alphabetically by name. Structs keep
+        # dict/insertion order too, which falls back to the order Ghidra's
+        # data type manager iterator returns them in.
+        f.write(json.dumps(data, sort_keys=False, indent=2))
     finally:
         f.close()
 

@@ -24,7 +24,7 @@ in-progress local work, a function/comment is only overwritten if it is
 still in an "untouched" state locally:
 
   - Function NAME is only applied if the local function still has an
-    auto-generated Ghidra name (FUN_/SUB_/thunk_FUN_/etc) OR already matches the
+    auto-generated Ghidra name (FUN_/SUB_/etc) OR already matches the
     incoming name exactly. If you've already given it a *different*
     name locally, the import leaves your name alone and logs a
     [CONFLICT] instead.
@@ -59,7 +59,7 @@ from ghidra.program.model.data import (
     DataType,
 )
 
-DEFAULT_NAME_PREFIXES = ("FUN_", "DAT_", "PTR_", "LAB_", "SUB_", "UNK_", "switchD_", "thunk_FUN_")
+DEFAULT_NAME_PREFIXES = ("FUN_", "DAT_", "PTR_", "LAB_", "SUB_", "UNK_", "switchD_", "thunk_FUN_", "thunk_fun")
 
 
 def is_user_named(name):
@@ -175,7 +175,7 @@ def resolve_field_type(dtm, type_str, fallback_length, local_structs):
 
     if dt is None:
         fallback_map = {1: Undefined1DataType.dataType, 2: Undefined2DataType.dataType,
-                        4: Undefined4DataType.dataType, 8: Undefined8DataType.dataType}
+                         4: Undefined4DataType.dataType, 8: Undefined8DataType.dataType}
         dt = fallback_map.get(fallback_length, DataType.DEFAULT)
 
     if array_len:
@@ -266,7 +266,6 @@ def apply_structs(structs, force):
         print("[STRUCT] %s: %d field(s) applied, %d conflict(s)" % (name, applied, conflicts))
 
     return applied_total, conflict_total
-
 
 def apply_function(name, entry, force):
     """
