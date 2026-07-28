@@ -12,6 +12,46 @@
         }
       ]
     }, 
+    "Event_PresentReaction_EvaluateExternal": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1cacf08", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FF 43 1C D1 ?? ?? ?? ?? F3 03 00 AA ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? D5 06 49 F9 69 8E 40 B9 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }
+      ]
+    }, 
     "cbrtf": {
       "return_type": "float", 
       "calling_convention": "unknown", 
@@ -70,6 +110,13 @@
           "name": "param_8"
         }
       ]
+    }, 
+    "PlayerBondSystem_Teardown": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x173c444", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? 08 00 40 F9 08 01 40 F9 00 01 3F D6 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 60 06 40 F9 ?? ?? ?? ?? E0 03 13 AA", 
+      "params": []
     }, 
     "RemoveBiquadFilter": {
       "return_type": "undefined", 
@@ -366,6 +413,54 @@
         }
       ]
     }, 
+    "Event_HandleGiftOrPresentTransition": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1c86d48", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 F3 03 00 AA ?? ?? ?? ?? ?? ?? ?? ?? 69 DA 44 B9 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 48 05 40 F9 ?? ?? ?? ?? 4A 01 40 B9 5F 01 09 6B 6B D6 44 B9", 
+      "params": [
+        {
+          "type": "undefined1[16]", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "float", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "ulong *", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_9"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_10"
+        }
+      ]
+    }, 
     "~Database": {
       "return_type": "undefined", 
       "calling_convention": "__thiscall", 
@@ -478,6 +573,22 @@
         }
       ]
     }, 
+    "RelationSystem_PeriodicSweep_ValidateActiveRelations": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x7be420", 
+      "signature": "FF 83 02 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 03 01 91 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 1F 05 00 71 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long *", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_2"
+        }
+      ]
+    }, 
     "SetBiquadFilterParameter": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -535,6 +646,22 @@
         {
           "type": "CaptureType *", 
           "name": "param_1"
+        }
+      ]
+    }, 
+    "PlayerBondSystem_FindExistingRelationship": {
+      "return_type": "ulong *", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x164a2ac", 
+      "signature": "08 00 40 B9 1F 05 00 71 ?? ?? ?? ?? E0 03 1F AA C0 03 5F D6 2A 00 40 F9 4B 7D 60 92 09 04 40 F9 4A 7D 40 93 4A 01 0B AA 20 01 40 F9 0C 2C 40 29 8C 7D 40 93 8B 81 0B AA 7F 01 0A EB ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "uint *", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "ulong *", 
+          "name": "param_2"
         }
       ]
     }, 
@@ -633,6 +760,18 @@
         }
       ]
     }, 
+    "Mii_GetIsAdultFlag": {
+      "return_type": "uint", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1e6be80", 
+      "signature": "FF 83 00 D1 ?? ?? ?? ?? FD 43 00 91 08 04 40 B9 ?? ?? ?? ?? ?? ?? ?? ?? 29 E1 1D 91 ?? ?? ?? ?? 2A 01 40 B9 29 05 40 F9 5F 01 08 6B 08 81 9F 1A ?? ?? ?? ?? 28 11 08 8B 0A 00 40 B9 09 05 40 B9", 
+      "params": [
+        {
+          "type": "int *", 
+          "name": "param_1"
+        }
+      ]
+    }, 
     "memcpy": {
       "return_type": "void *", 
       "calling_convention": "unknown", 
@@ -674,6 +813,22 @@
         {
           "type": "/Demangler/nn/Result\npack(disabled)\nStructure Result {\n}\nLength: 0 Alignment: 1\n", 
           "name": "param_1"
+        }
+      ]
+    }, 
+    "ParameterParser_DeserializeRelationConfig": {
+      "return_type": "bool", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1c34688", 
+      "signature": "FF 83 02 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 43 01 91 ?? ?? ?? ?? 08 E0 00 91 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? F3 03 01 AA F4 03 00 AA 09 43 00 91 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined8 *", 
+          "name": "param_2"
         }
       ]
     }, 
@@ -789,6 +944,54 @@
         }
       ]
     }, 
+    "Event_TeardownPresentReaction": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1cada44", 
+      "signature": "FF C3 00 D1 ?? ?? ?? ?? ?? ?? ?? ?? FD 43 00 91 ?? ?? ?? ?? F3 03 00 AA ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? E1 03 1F AA ?? ?? ?? ?? 61 22 02 91 E0 03 13 AA ?? ?? ?? ?? E8 02 80 52 E0 03 13 AA", 
+      "params": [
+        {
+          "type": "undefined1[16]", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "float", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "ulong *", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_9"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_10"
+        }
+      ]
+    }, 
     "GetOperationMode": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -861,6 +1064,26 @@
         {
           "type": "long", 
           "name": "param_1"
+        }
+      ]
+    }, 
+    "Event_ExitPresentOrGiftFlow": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1cadc20", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 01 20 02 91 F3 03 00 AA 34 FC 99 52 94 28 A3 72 ?? ?? ?? ?? E0 03 13 AA ?? ?? ?? ?? ?? ?? ?? ?? E1 03 14 AA ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "undefined1[16]", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "float", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_3"
         }
       ]
     }, 
@@ -1142,6 +1365,22 @@
         }
       ]
     }, 
+    "RelationType_ResolveAndStore": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1d19a50", 
+      "signature": "FF C3 00 D1 ?? ?? ?? ?? ?? ?? ?? ?? FD 43 00 91 ?? ?? ?? ?? 2A 04 40 B9 F3 03 01 AA ?? ?? ?? ?? F4 03 00 AA ?? ?? ?? ?? ?? ?? ?? ?? 69 05 40 F9 ?? ?? ?? ?? 6B 01 40 B9 7F 01 0A 6B 6C 02 40 B9", 
+      "params": [
+        {
+          "type": "int *", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "int *", 
+          "name": "param_2"
+        }
+      ]
+    }, 
     "GetEyeGreenColor": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -1199,6 +1438,18 @@
         {
           "type": "ScalableFontEngine *", 
           "name": "this"
+        }
+      ]
+    }, 
+    "Event_LevelUp_ApplyCamera": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x2005de4", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? F3 03 00 AA ?? ?? ?? ?? 01 A8 85 52 E1 AA B2 72 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? F4 03 00 AA ?? ?? ?? ?? ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
         }
       ]
     }, 
@@ -1491,6 +1742,50 @@
         }
       ]
     }, 
+    "ParamSystem_LoadOrAcquireResource": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x57eebc", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 F3 03 08 AA A8 63 00 91 23 00 80 52 ?? ?? ?? ?? ?? ?? ?? ?? 68 02 00 F9 ?? ?? ?? ?? 08 91 05 91 09 7D 5F 88 29 05 00 11 09 7D 0A 88 ?? ?? ?? ?? A0 63 00 91", 
+      "params": [
+        {
+          "type": "long *", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "undefined8 *", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8 *", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_9"
+        }
+      ]
+    }, 
     "GfxMgr_GetInstance": {
       "return_type": "undefined8 *", 
       "calling_convention": "__cdecl", 
@@ -1631,6 +1926,18 @@
         {
           "type": "FinalMixType *", 
           "name": "param_2"
+        }
+      ]
+    }, 
+    "InitializeGameStateStates": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0xa23638", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 14 80 00 91 F3 03 00 AA ?? ?? ?? ?? 08 BD 2F 91 ?? ?? ?? ?? A2 63 00 91 E0 03 14 AA E1 03 1F 2A ?? ?? ?? ?? ?? ?? ?? ?? 08 BD 0F 91 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
         }
       ]
     }, 
@@ -1860,6 +2167,42 @@
         }
       ]
     }, 
+    "RelationType_DispatchByCheckKind": {
+      "return_type": "ulong", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x6afd8", 
+      "signature": "5F 0C 00 71 ?? ?? ?? ?? 5F 08 00 71 ?? ?? ?? ?? 5F 04 00 71 ?? ?? ?? ?? 20 00 80 52 C0 03 5F D6 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FF 03 01 D1 ?? ?? ?? ?? FD C3 00 91 ?? ?? ?? ?? 08 C1 30 91", 
+      "params": [
+        {
+          "type": "int *", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "int *", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "int", 
+          "name": "param_3"
+        }
+      ]
+    }, 
+    "PlayerBondSystem_TryAddRelationship": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1ff4d88", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 F3 03 00 AA 68 26 CD 29 1F 01 09 6B ?? ?? ?? ?? E0 03 13 AA F4 03 01 AA ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? C0 03 5F D6 E0 03 13 AA E1 03 14 AA", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "ulong *", 
+          "name": "param_2"
+        }
+      ]
+    }, 
     "StepladderSystem_GetInstance": {
       "return_type": "undefined8 *", 
       "calling_convention": "__cdecl", 
@@ -2041,6 +2384,22 @@
         {
           "type": "ushort", 
           "name": "param_6"
+        }
+      ]
+    }, 
+    "RelationMatrix_GetPairField_SubState": {
+      "return_type": "undefined4", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x4384d8", 
+      "signature": "?? ?? ?? ?? 6B C1 0C 91 ?? ?? ?? ?? ?? ?? ?? ?? FF C3 00 D1 ?? ?? ?? ?? FD 83 00 91 08 0C 82 B8 ?? ?? ?? ?? 08 01 00 8B ?? ?? ?? ?? 09 CD 8A B8 3F 01 00 F1 08 01 09 8B 04 19 40 FA EA 17 9F 1A", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "uint *", 
+          "name": "param_2"
         }
       ]
     }, 
@@ -2598,6 +2957,22 @@
         }
       ]
     }, 
+    "RelationTransition_TryEstablishParentChild?": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1d19cb0", 
+      "signature": "62 02 80 52 E3 03 1F AA ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 F4 03 01 AA F3 03 00 AA ?? ?? ?? ?? ?? ?? ?? ?? E0 03 13 AA E1 03 14 AA ?? ?? ?? ?? 1F 04 00 31 ?? ?? ?? ?? 28 00 80 52", 
+      "params": [
+        {
+          "type": "int *", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "int *", 
+          "name": "param_2"
+        }
+      ]
+    }, 
     "ReadCircularBufferSink": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -2771,6 +3146,34 @@
         {
           "type": "int", 
           "name": "param_2"
+        }
+      ]
+    }, 
+    "GroupActionTable_SelectWeightedReaction": {
+      "return_type": "bool", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x72fb74", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 83 00 91 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FF C3 14 D1 F4 03 00 AA ?? ?? ?? ?? ?? ?? ?? ?? F7 03 04 AA F5 03 03 AA ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "int", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "int *", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "int *", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "uint *", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "int *", 
+          "name": "param_5"
         }
       ]
     }, 
@@ -2996,6 +3399,26 @@
       "signature": "", 
       "params": []
     }, 
+    "RelationSystem_HandleGroupActionOutcome": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x5e0908", 
+      "signature": "FF 83 01 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 83 00 91 28 00 40 B9 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? F3 03 02 AA F4 03 01 AA ?? ?? ?? ?? F5 03 00 AA 1F 15 01 71 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "undefined8 *", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "uint *", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "uint *", 
+          "name": "param_3"
+        }
+      ]
+    }, 
     "Array": {
       "return_type": "undefined", 
       "calling_convention": "__thiscall", 
@@ -3017,6 +3440,26 @@
         {
           "type": "MutexType *", 
           "name": "param_1"
+        }
+      ]
+    }, 
+    "UpdateAskCancelRelationshipsStateTick": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1af6d08", 
+      "signature": "FF 83 01 D1 ?? ?? ?? ?? ?? ?? ?? ?? FD 03 01 91 08 24 40 B9 F3 03 00 AA 14 80 00 91 09 0C 41 39 1F 01 00 71 24 09 40 7A ?? ?? ?? ?? ?? ?? ?? ?? A1 57 86 52 61 FA A4 72 ?? ?? ?? ?? ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "undefined1[16]", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "float", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_3"
         }
       ]
     }, 
@@ -3329,6 +3772,18 @@
         }
       ]
     }, 
+    "InitCategoriesMenuOptions": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0xa7b888", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 08 48 43 B9 F3 03 00 AA 09 4C 43 B9 1F 01 09 6B ?? ?? ?? ?? 68 AE 41 F9 ?? ?? ?? ?? 09 01 40 F9 69 AE 01 F9 ?? ?? ?? ?? 29 21 2F 91 ?? ?? ?? ?? ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }
+      ]
+    }, 
     "StartAudioRenderer": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -3452,6 +3907,13 @@
         }
       ]
     }, 
+    "MiiActorRegistry_GetDefaultSentinel": {
+      "return_type": "undefined *", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x163bc10", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? C0 03 5F D6 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??", 
+      "params": []
+    }, 
     "IsI3dl2ReverbEnabled": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -3528,6 +3990,33 @@
         }
       ]
     }, 
+    "RelationCondition_Evaluate": {
+      "return_type": "byte", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x6b1bc", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? FF 43 08 D1 F3 03 01 AA F4 03 00 AA ?? ?? ?? ?? E0 03 00 91 A1 73 00 91 ?? ?? ?? ?? ?? ?? ?? ?? 89 06 40 B9 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "int *", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "int *", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "uint", 
+          "name": "param_3"
+        }
+      ]
+    }, 
+    "GetPngDataSizeMax": {
+      "return_type": "undefined", 
+      "calling_convention": "unknown", 
+      "address_offset": "0x5362000", 
+      "signature": "", 
+      "params": []
+    }, 
     "SetAuxEnabled": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -3543,13 +4032,6 @@
           "name": "param_2"
         }
       ]
-    }, 
-    "GetPngDataSizeMax": {
-      "return_type": "undefined", 
-      "calling_convention": "unknown", 
-      "address_offset": "0x5362000", 
-      "signature": "", 
-      "params": []
     }, 
     "CheckGlyphExist": {
       "return_type": "undefined", 
@@ -3703,6 +4185,46 @@
       "address_offset": "0x55b724", 
       "signature": "?? ?? ?? ?? ?? ?? ?? ?? C0 03 5F D6 FF 03 01 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 43 00 91 F3 03 01 AA F4 03 00 AA F5 03 08 AA ?? ?? ?? ?? ?? ?? ?? ?? A8 63 00 91 E2 23 00 91 E0 03 14 AA", 
       "params": []
+    }, 
+    "RelationSystem_InitRoot": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x4a9f3c", 
+      "signature": "FF 43 01 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 83 00 91 ?? ?? ?? ?? F4 03 00 AA ?? ?? ?? ?? F3 03 01 AA ?? ?? ?? ?? ?? ?? ?? ?? 81 82 00 91 ?? ?? ?? ?? ?? ?? ?? ?? E1 23 00 91 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "long *", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }
+      ]
     }, 
     "SetDelayDryGain": {
       "return_type": "undefined", 
@@ -3946,6 +4468,54 @@
         {
           "type": "BufferMixerType *", 
           "name": "param_1"
+        }
+      ]
+    }, 
+    "UpdateRelationshipsStateTick": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1af3e14", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FF C3 1B D1 08 24 40 B9 F3 03 00 AA 1F 01 00 71 09 0C 41 39 24 09 40 7A ?? ?? ?? ?? 68 B6 4B B9 1F 09 00 71 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "undefined1[16]", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "float", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_9"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_10"
         }
       ]
     }, 
@@ -4346,6 +4916,42 @@
       "signature": "", 
       "params": []
     }, 
+    "RelationTransition_ResolveFurtherTransitionMask": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1d19c20", 
+      "signature": "FF C3 00 D1 ?? ?? ?? ?? ?? ?? ?? ?? FD 43 00 91 F4 03 00 AA A8 13 00 D1 E0 03 01 AA F3 03 01 AA ?? ?? ?? ?? A1 13 00 D1 E0 03 14 AA ?? ?? ?? ?? ?? ?? ?? ?? E2 01 80 52 E0 03 14 AA E1 03 13 AA", 
+      "params": [
+        {
+          "type": "int *", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "int *", 
+          "name": "param_2"
+        }
+      ]
+    }, 
+    "RelationSystem_RevalidateSinglePair_Type6?": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1749354", 
+      "signature": "FF 43 01 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 83 00 91 2A 20 40 29 5F 01 08 6B 29 18 40 B9 20 B9 46 7A ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FF 43 01 91 C0 03 5F D6 F3 03 00 AA", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "uint *", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "byte", 
+          "name": "param_3"
+        }
+      ]
+    }, 
     "ResolveFoodTypeEnum": {
       "return_type": "ushort", 
       "calling_convention": "__cdecl", 
@@ -4361,6 +4967,13 @@
           "name": "param_2"
         }
       ]
+    }, 
+    "ScreenPetitPersonalityEdit": {
+      "return_type": "char *", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x20f5a0c", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? C0 03 5F D6 C0 03 5F D6 ?? ?? ?? ?? FF 83 00 D1 FD 7B 01 A9 FD 43 00 91 ?? ?? ?? ?? 08 81 1D 91 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 08 61 1D 91 3F 00 08 EB ?? ?? ?? ??", 
+      "params": []
     }, 
     "strcat": {
       "return_type": "char *", 
@@ -4599,6 +5212,22 @@
         }
       ]
     }, 
+    "LoadRelationGroupActionTableParameters": {
+      "return_type": "bool", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1c63534", 
+      "signature": "FF 43 02 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 43 01 91 ?? ?? ?? ?? 08 00 01 91 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? F3 03 01 AA F4 03 00 AA 09 43 00 91 ?? ?? ?? ?? ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined8 *", 
+          "name": "param_2"
+        }
+      ]
+    }, 
     "time": {
       "return_type": "typedef time_t __time_t", 
       "calling_convention": "unknown", 
@@ -4726,6 +5355,54 @@
         {
           "type": "int *", 
           "name": "param_2"
+        }
+      ]
+    }, 
+    "Event_LevelUp_ApplyRewardBranch": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1fefb90", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? 29 00 80 52 ?? ?? ?? ?? ?? ?? ?? ?? F3 03 00 AA ?? ?? ?? ?? E1 6C 80 52 21 18 AE 72 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 08 00 40 F9", 
+      "params": [
+        {
+          "type": "undefined1[16]", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "float", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_9"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_10"
         }
       ]
     }, 
@@ -4937,6 +5614,18 @@
       "params": [
         {
           "type": "PosixTime *", 
+          "name": "param_1"
+        }
+      ]
+    }, 
+    "Mii_ComputeIsAdultFallback": {
+      "return_type": "uint", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x4386b0", 
+      "signature": "FF 83 00 D1 ?? ?? ?? ?? FD 43 00 91 ?? ?? ?? ?? 08 04 40 B9 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 4B 01 40 B9 4A 05 40 F9 7F 01 08 6B 08 81 9F 1A ?? ?? ?? ?? 48 11 08 8B 0B 00 40 B9 0A 05 40 B9", 
+      "params": [
+        {
+          "type": "int *", 
           "name": "param_1"
         }
       ]
@@ -5349,6 +6038,70 @@
         }
       ]
     }, 
+    "Event_ApplyBondOutcome_Simple": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1c94510", 
+      "signature": "FF 03 03 D1 ?? ?? ?? ?? ?? ?? ?? ?? FD 83 02 91 14 20 02 91 F3 03 00 AA E0 03 14 AA ?? ?? ?? ?? ?? ?? ?? ?? 28 00 80 52 E0 03 13 AA 68 AA 00 B9 ?? ?? ?? ?? 41 05 80 52 ?? ?? ?? ?? E2 03 1F 2A", 
+      "params": [
+        {
+          "type": "undefined1[16]", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "float", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_9"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_10"
+        }
+      ]
+    }, 
+    "ParameterRecord_ExtractStringRef": {
+      "return_type": "undefined8", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x7eda34", 
+      "signature": "08 30 40 39 1F 81 02 71 ?? ?? ?? ?? 0A 00 40 F9 49 28 8B 52 48 01 40 79 4B 09 40 B9 6C 09 C0 5A 1F 01 09 6B 8B 01 8B 1A ?? ?? ?? ?? 4A C1 2B 8B 4B 01 40 39 7F 15 03 71 ?? ?? ?? ?? EB 03 1F AA", 
+      "params": [
+        {
+          "type": "undefined8 *", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "long *", 
+          "name": "param_2"
+        }
+      ]
+    }, 
     "LookupRecordField": {
       "return_type": "bool", 
       "calling_convention": "__cdecl", 
@@ -5629,6 +6382,18 @@
         }
       ]
     }, 
+    "RelationConfig_LookupEnumIndex": {
+      "return_type": "undefined4", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x6b0f0", 
+      "signature": "E9 03 1F 2A 6A 00 80 52 ?? ?? ?? ?? 08 F1 2F 91 4B 01 09 0B 6B 7D 01 53 0C 49 2B 8B ?? ?? ?? ?? ?? ?? ?? ?? 9F 01 00 6B ?? ?? ?? ?? 08 09 0B 8B ?? ?? ?? ?? C0 03 5F D6 6D 05 00 51 9F 01 00 6B", 
+      "params": [
+        {
+          "type": "uint", 
+          "name": "param_1"
+        }
+      ]
+    }, 
     "Controller_IsStateComplete": {
       "return_type": "bool", 
       "calling_convention": "__cdecl", 
@@ -5701,6 +6466,18 @@
         {
           "type": "int", 
           "name": "param_4"
+        }
+      ]
+    }, 
+    "Event_LevelUp_CopyStatBlocks": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x20061a4", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 08 24 40 B9 F3 03 00 AA 1F 01 00 71 09 0C 41 39 24 09 40 7A ?? ?? ?? ?? 60 3E 40 F9 ?? ?? ?? ?? 60 3E 40 F9 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
         }
       ]
     }, 
@@ -5983,6 +6760,54 @@
         {
           "type": "undefined8", 
           "name": "param_8"
+        }
+      ]
+    }, 
+    "UpdateLoveTargetStateTick": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1af6f18", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FF 83 1B D1 08 24 40 B9 F3 03 00 AA 1F 01 00 71 09 0C 41 39 24 09 40 7A ?? ?? ?? ?? 68 B6 4B B9 1F 09 00 71 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "undefined1[16]", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "float", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_9"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_10"
         }
       ]
     }, 
@@ -6299,6 +7124,54 @@
         }
       ]
     }, 
+    "UpdateRelationshipsTutorialStateTick": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1af4870", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? ?? ?? ?? ?? FF 83 1B D1 08 24 40 B9 F3 03 00 AA 1F 01 00 71 09 0C 41 39 24 09 40 7A ?? ?? ?? ?? 68 B6 4B B9 1F 05 00 71 ?? ?? ?? ?? 1F 09 00 71", 
+      "params": [
+        {
+          "type": "undefined1[16]", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "float", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_9"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_10"
+        }
+      ]
+    }, 
     "GetMouthGreenColor": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -6458,6 +7331,42 @@
         }
       ]
     }, 
+    "Event_HandleCallOrCameraInteraction": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1ca50a4", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? ?? ?? ?? ?? FF 83 1A D1 ?? ?? ?? ?? F3 03 00 AA ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 15 05 49 F9 ?? ?? ?? ?? 61 A4 94 52 A1 0D B5 72 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "undefined1[16]", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "float", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_3"
+        }
+      ]
+    }, 
+    "PlayerBondSystem_AllocateAndStoreRelationship": {
+      "return_type": "undefined8 *", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0xf87b4", 
+      "signature": "09 28 40 29 3F 01 0A 6B ?? ?? ?? ?? E8 03 00 AA 00 08 40 F9 ?? ?? ?? ?? 09 00 40 F9 09 09 00 F9 09 00 80 92 09 00 00 F9 29 00 40 B9 09 00 00 B9 29 04 40 B9 09 04 00 B9 09 29 40 29 29 7D 40 93", 
+      "params": [
+        {
+          "type": "int *", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined4 *", 
+          "name": "param_2"
+        }
+      ]
+    }, 
     "IsVoiceDroppedFlagOn": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -6499,6 +7408,18 @@
         {
           "type": "int", 
           "name": "param_6"
+        }
+      ]
+    }, 
+    "GroupActionItem_ReadMii0ToMii1LoveCheckFlag": {
+      "return_type": "undefined4", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x6b004", 
+      "signature": "FF 03 01 D1 ?? ?? ?? ?? FD C3 00 91 ?? ?? ?? ?? 08 C1 30 91 ?? ?? ?? ?? A9 13 00 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? E0 63 00 91 E1 23 00 91 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
         }
       ]
     }, 
@@ -6548,6 +7469,30 @@
       "address_offset": "0x5356000", 
       "signature": "", 
       "params": []
+    }, 
+    "RelationTransition_ValidateEligibility": {
+      "return_type": "undefined8", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x5e0e60", 
+      "signature": "FF C3 01 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 43 00 91 F4 03 02 AA ?? ?? ?? ?? 0A 04 40 B9 F8 03 00 AA ?? ?? ?? ?? ?? ?? ?? ?? 5A E3 1D 91 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "int *", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "int *", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "uint", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "int", 
+          "name": "param_4"
+        }
+      ]
     }, 
     "GetLocationName": {
       "return_type": "undefined", 
@@ -6936,6 +7881,38 @@
         }
       ]
     }, 
+    "RegisterNodeProperty": {
+      "return_type": "long *", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x6d2c24", 
+      "signature": "FF 83 00 D1 ?? ?? ?? ?? FD 43 00 91 49 00 40 F9 EA 03 09 AA 08 14 40 F9 EB 03 09 AA 4C 01 40 39 ?? ?? ?? ?? 9F BD 00 71 ?? ?? ?? ?? 4A 05 00 91 29 05 00 11 ?? ?? ?? ?? EF 03 1F AA 0E A1 00 D1", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "int", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "undefined8 *", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "byte", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "uint", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "uint", 
+          "name": "param_6"
+        }
+      ]
+    }, 
     "StandardAllocator": {
       "return_type": "undefined", 
       "calling_convention": "__thiscall", 
@@ -7136,6 +8113,62 @@
         }
       ]
     }, 
+    "ArchiveLoader_LoadBlarcAsset": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x55a300", 
+      "signature": "FF 43 06 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD C3 04 91 F3 03 02 AA F5 03 00 AA 00 1C 40 F9 62 00 40 F9 F4 03 01 AA A1 63 00 D1 F6 03 03 AA ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long *", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "undefined8 *", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8 *", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }
+      ]
+    }, 
+    "RelationMatrix_GetPairField_Type": {
+      "return_type": "undefined4", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x51a5c", 
+      "signature": "?? ?? ?? ?? 6B C1 0C 91 ?? ?? ?? ?? ?? ?? ?? ?? FF C3 00 D1 ?? ?? ?? ?? FD 83 00 91 08 0C 82 B8 ?? ?? ?? ?? 08 01 00 8B ?? ?? ?? ?? 09 CD 8A B8 3F 01 00 F1 08 01 09 8B 04 19 40 FA EA 17 9F 1A", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "uint *", 
+          "name": "param_2"
+        }
+      ]
+    }, 
     "ToPosixTimeFromUtc": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -7176,6 +8209,18 @@
         }
       ]
     }, 
+    "UpdateAskLostLoveStateTick": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1afb9fc", 
+      "signature": "FF 83 01 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 43 00 91 08 24 40 B9 ?? ?? ?? ?? ?? ?? ?? ?? 09 0C 41 39 F3 03 00 AA B4 57 86 52 74 FA A4 72 ?? ?? ?? ?? 1F 01 00 71", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }
+      ]
+    }, 
     "SetModulation": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -7185,6 +8230,46 @@
         {
           "type": "VibrationModulation *", 
           "name": "param_1"
+        }
+      ]
+    }, 
+    "Event_ExitEmoteOrLevelUpBranch": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1c7787c", 
+      "signature": "FF C3 01 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 03 01 91 08 8C 40 B9 F3 03 00 AA ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 49 05 40 F9 ?? ?? ?? ?? 4A 01 40 B9 5F 01 08 6B", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "ulong *", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
         }
       ]
     }, 
@@ -7325,6 +8410,22 @@
         {
           "type": "char *", 
           "name": "param_1"
+        }
+      ]
+    }, 
+    "RelationMatrix_GetPairField_BloodFlag": {
+      "return_type": "ushort", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x16d810", 
+      "signature": "?? ?? ?? ?? 6B C1 0C 91 ?? ?? ?? ?? ?? ?? ?? ?? FF C3 00 D1 ?? ?? ?? ?? FD 83 00 91 08 0C 82 B8 ?? ?? ?? ?? 08 01 00 8B ?? ?? ?? ?? 09 CD 8A B8 3F 01 00 F1 08 01 09 8B 04 19 40 FA EA 17 9F 1A", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "uint *", 
+          "name": "param_2"
         }
       ]
     }, 
@@ -7527,6 +8628,22 @@
         }
       ]
     }, 
+    "RelationParam_Serialize": {
+      "return_type": "ulong", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1c350d8", 
+      "signature": "FF 83 01 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 83 00 91 F3 03 01 AA F4 03 00 AA ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 29 85 35 91 ?? ?? ?? ?? F6 43 00 91 E1 03 00 91 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined8 *", 
+          "name": "param_2"
+        }
+      ]
+    }, 
     "QueryMemoryInfo": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -7584,6 +8701,62 @@
         {
           "type": "ulong", 
           "name": "param_4"
+        }
+      ]
+    }, 
+    "ParamRegistry_FindOrCreate": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x421974", 
+      "signature": "FF 83 01 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 43 00 91 13 00 01 91 F5 03 00 AA 1F 01 00 F9 E0 03 13 AA F8 03 03 2A F6 03 02 AA F7 03 01 AA F4 03 08 AA ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long *", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "undefined8 *", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8 *", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "uint", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_9"
+        }
+      ]
+    }, 
+    "InitPersonalityAndParts": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1b1b4ac", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? 08 BD 0A 91 ?? ?? ?? ?? A2 63 00 91 E1 03 1F 2A 23 00 80 52 E4 03 1F 2A 25 00 80 52 F3 03 00 AA ?? ?? ?? ?? ?? ?? ?? ?? 08 91 00 91 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
         }
       ]
     }, 
@@ -7878,6 +9051,18 @@
         }
       ]
     }, 
+    "GroupActionItem_ReadMii1ToMii0LoveCheckFlag": {
+      "return_type": "undefined4", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x6b164", 
+      "signature": "FF 03 01 D1 ?? ?? ?? ?? FD C3 00 91 ?? ?? ?? ?? 08 C1 30 91 ?? ?? ?? ?? A9 13 00 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? E0 63 00 91 E1 23 00 91 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }
+      ]
+    }, 
     "IsAlignmentValid": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -7914,6 +9099,18 @@
         {
           "type": "int", 
           "name": "param_3"
+        }
+      ]
+    }, 
+    "SetupMenuContextAndBindings": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0xa77e48", 
+      "signature": "FF 83 01 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 43 00 91 F3 03 00 AA F4 03 1F 2A 15 03 80 52 ?? ?? ?? ?? D6 62 04 91 ?? ?? ?? ?? F7 A2 31 91 ?? ?? ?? ?? 18 83 2C 91", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
         }
       ]
     }, 
@@ -7991,6 +9188,18 @@
         }
       ]
     }, 
+    "PlayerBondSystem_Destructor": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x173c3b0", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? 08 81 34 91 ?? ?? ?? ?? ?? ?? ?? ?? F3 03 00 AA ?? ?? ?? ?? 3F 01 00 EB ?? ?? ?? ?? E0 03 13 AA ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "undefined8 *", 
+          "name": "param_1"
+        }
+      ]
+    }, 
     "GetAudioDeviceOutputVolume": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -8015,6 +9224,22 @@
         }, 
         {
           "type": "char * *", 
+          "name": "param_2"
+        }
+      ]
+    }, 
+    "SerializeRelationGroupActionTableParameters": {
+      "return_type": "ulong", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1c63a50", 
+      "signature": "FF 83 01 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 83 00 91 F3 03 01 AA F4 03 00 AA ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 08 95 37 91 ?? ?? ?? ?? F7 43 00 91 E1 03 00 91 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined8 *", 
           "name": "param_2"
         }
       ]
@@ -8056,6 +9281,62 @@
         {
           "type": "undefined8", 
           "name": "param_8"
+        }
+      ]
+    }, 
+    "AsyncWorker_ProcessTask?WithRelationRoot": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1eac4a4", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 13 C0 00 91 F4 03 00 AA E0 03 13 AA ?? ?? ?? ?? 88 82 41 39 ?? ?? ?? ?? E0 03 13 AA ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "undefined1[16]", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined4", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "undefined4", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined4", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "long *", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_9"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_10"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_11"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_12"
         }
       ]
     }, 
@@ -8123,6 +9404,18 @@
         }
       ]
     }, 
+    "RelationParam_GetAddress_Mii0ToMii1GenerateLoveCheck": {
+      "return_type": "long", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1c3568c", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 08 18 43 39 F3 03 00 AA ?? ?? ?? ?? 60 82 02 91 ?? ?? ?? ?? ?? ?? ?? ?? C0 03 5F D6 60 42 00 91 ?? ?? ?? ?? F4 03 00 AA ?? ?? ?? ?? 68 82 02 91 9F 02 00 F1", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }
+      ]
+    }, 
     "GetActiveAudioOutputDeviceName": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -8144,6 +9437,26 @@
         {
           "type": "CalculateSizeAndAlignment *", 
           "name": "this"
+        }
+      ]
+    }, 
+    "UpdatePersonalityStateTick": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1af7788", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? ?? ?? ?? ?? FF 83 1B D1 08 24 40 B9 F3 03 00 AA 1F 01 00 71 09 0C 41 39 24 09 40 7A ?? ?? ?? ?? 68 B6 4B B9 1F 05 00 71 ?? ?? ?? ?? 1F 09 00 71", 
+      "params": [
+        {
+          "type": "undefined1[16]", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "float", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_3"
         }
       ]
     }, 
@@ -8216,6 +9529,46 @@
         {
           "type": "int", 
           "name": "param_4"
+        }
+      ]
+    }, 
+    "Event_ChangeCloth_Grant": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x2002064", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FF C3 1C D1 08 24 40 B9 F3 03 00 AA 1F 01 00 71 09 0C 41 39 24 09 40 7A ?? ?? ?? ?? 74 A2 01 91 E0 03 14 AA", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
         }
       ]
     }, 
@@ -8295,6 +9648,22 @@
         }
       ]
     }, 
+    "SerializeRelationRootMeterParameters": {
+      "return_type": "ulong", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1c65be0", 
+      "signature": "FF C3 00 D1 ?? ?? ?? ?? ?? ?? ?? ?? FD 43 00 91 F3 03 01 AA F4 03 00 AA ?? ?? ?? ?? ?? ?? ?? ?? 08 DD 3B 91 E1 03 00 91 ?? ?? ?? ?? 68 02 40 F9 E0 03 13 AA 08 01 40 F9 00 01 3F D6 1F 04 00 71", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined8 *", 
+          "name": "param_2"
+        }
+      ]
+    }, 
     "pthread_mutex_init": {
       "return_type": "int", 
       "calling_convention": "unknown", 
@@ -8331,6 +9700,26 @@
         {
           "type": "float", 
           "name": "__y"
+        }
+      ]
+    }, 
+    "UpdateParam": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x3569d0", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 43 00 91 08 A4 40 F9 ?? ?? ?? ?? 08 40 20 1E 09 19 40 B9 3F 01 01 6B ?? ?? ?? ?? ?? ?? ?? ?? 08 21 00 91 08 01 40 F9", 
+      "params": [
+        {
+          "type": "float", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "int", 
+          "name": "param_3"
         }
       ]
     }, 
@@ -8396,6 +9785,46 @@
       "address_offset": "0x53bc000", 
       "signature": "", 
       "params": []
+    }, 
+    "Event_AbortGift_Cleanup": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1c9a188", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 F3 03 00 AA ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 08 61 37 91 ?? ?? ?? ?? ?? ?? ?? ?? E1 03 1F AA ?? ?? ?? ?? 74 22 02 91 E0 03 13 AA E1 03 14 AA ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "ulong *", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }
+      ]
     }, 
     "PngEncoder": {
       "return_type": "undefined", 
@@ -8487,13 +9916,6 @@
         }
       ]
     }, 
-    "GetSystemTickFrequency": {
-      "return_type": "undefined", 
-      "calling_convention": "unknown", 
-      "address_offset": "0x5452000", 
-      "signature": "", 
-      "params": []
-    }, 
     "MiiTasteSystem_EvaluateTasteScore": {
       "return_type": "int", 
       "calling_convention": "__cdecl", 
@@ -8509,6 +9931,13 @@
           "name": "food_id"
         }
       ]
+    }, 
+    "GetSystemTickFrequency": {
+      "return_type": "undefined", 
+      "calling_convention": "unknown", 
+      "address_offset": "0x5452000", 
+      "signature": "", 
+      "params": []
     }, 
     "AcquireFinalMix": {
       "return_type": "undefined", 
@@ -8849,6 +10278,22 @@
         }
       ]
     }, 
+    "LoadRelationRootMeterParameters": {
+      "return_type": "bool", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1c65768", 
+      "signature": "FF 43 02 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 43 01 91 ?? ?? ?? ?? 08 F0 03 91 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? F3 03 01 AA F4 03 00 AA 09 43 00 91 ?? ?? ?? ?? ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined8 *", 
+          "name": "param_2"
+        }
+      ]
+    }, 
     "AddBiquadFilter": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -9165,6 +10610,22 @@
         }
       ]
     }, 
+    "RelationTransition_Attempt_Forced": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1d19be0", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 22 00 80 52 F3 03 01 AA F4 03 00 AA ?? ?? ?? ?? E2 03 00 2A E0 03 14 AA E1 03 13 AA ?? ?? ?? ?? 23 00 80 52 ?? ?? ?? ?? ?? ?? ?? ?? FF C3 00 D1", 
+      "params": [
+        {
+          "type": "int *", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "int *", 
+          "name": "param_2"
+        }
+      ]
+    }, 
     "nnosLockMutex": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -9382,6 +10843,82 @@
         }
       ]
     }, 
+    "UpdateRelationshipsMiiListStateTick": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1af51b0", 
+      "signature": "FF 03 01 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 43 00 91 08 24 40 B9 F3 03 00 AA 1F 01 00 71 09 0C 41 39 24 09 40 7A ?? ?? ?? ?? 68 B6 4B B9 1F 09 00 71 ?? ?? ?? ?? 1F 05 00 71 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "undefined1[16]", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "float", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_9"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_10"
+        }
+      ]
+    }, 
+    "RelationConfig_GetParentPtr": {
+      "return_type": "undefined8", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x84e034", 
+      "signature": "08 00 40 F9 ?? ?? ?? ?? E0 03 1F AA C0 03 5F D6 08 04 40 F9 ?? ?? ?? ?? 09 0D 40 B9 0A 10 40 B9 3F 01 0A 6B ?? ?? ?? ?? 00 01 40 F9 C0 03 5F D6 ?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 F3 03 01 AA", 
+      "params": [
+        {
+          "type": "long *", 
+          "name": "param_1"
+        }
+      ]
+    }, 
+    "MurmurHash3_x86_32": {
+      "return_type": "uint", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x69eb0", 
+      "signature": "0D 00 40 39 ?? ?? ?? ?? E9 03 1F 2A 2A AA 85 52 CA 93 B9 72 68 B2 86 52 E8 70 A3 72 0B 00 90 52 0B D5 A2 72 8C 6C 8D 52 8C CA BC 72 EE 03 00 AA 2F 05 00 11 10 48 6F 38 ?? ?? ?? ?? 2F 09 00 11", 
+      "params": [
+        {
+          "type": "byte *", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "uint", 
+          "name": "param_2"
+        }
+      ]
+    }, 
     "GetOrCreateResource": {
       "return_type": "undefined", 
       "calling_convention": "__cdecl", 
@@ -9589,6 +11126,22 @@
         }
       ]
     }, 
+    "LoadRelationRootParameters": {
+      "return_type": "ulong", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1c65548", 
+      "signature": "FF 83 01 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD C3 00 91 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? F3 03 01 AA F4 03 00 AA ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 88 1A 04 91 89 22 03 91 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined8 *", 
+          "name": "param_2"
+        }
+      ]
+    }, 
     "UnexpectedDefaultImpl": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -9668,6 +11221,22 @@
         }
       ]
     }, 
+    "RelationCheck_BloodExclusion": {
+      "return_type": "undefined8", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x5e1550", 
+      "signature": "?? ?? ?? ?? 08 00 40 B9 0A 1B 95 52 2A 03 A0 72 ?? ?? ?? ?? 1F 15 01 71 ?? ?? ?? ?? 2A 69 6A F8 ?? ?? ?? ?? 29 01 0D 91 ?? ?? ?? ?? 48 0D 08 8B 08 15 40 F9 0B 01 10 91 1F 01 00 F1 29 01 8B 9A", 
+      "params": [
+        {
+          "type": "uint *", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "uint *", 
+          "name": "param_2"
+        }
+      ]
+    }, 
     "SetDefaultMii": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -9731,6 +11300,22 @@
       "signature": "C0 03 5F D6 00 9C 40 F9 ?? ?? ?? ?? 02 04 40 F9 E3 03 1F 2A ?? ?? ?? ?? 00 20 00 91 E1 03 1F AA E2 03 1F AA ?? ?? ?? ?? 01 88 00 A9 ?? ?? ?? ?? 1F 0C 00 F9 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??", 
       "params": []
     }, 
+    "PlayerBondSystemInstance_TrackNewBond": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x173c5f4", 
+      "signature": "08 24 44 29 1F 01 09 6B ?? ?? ?? ?? FF C3 00 D1 ?? ?? ?? ?? ?? ?? ?? ?? FD 43 00 91 14 20 00 91 F3 03 01 AA E2 03 00 91 28 24 40 29 81 02 40 F9 E0 03 14 AA ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "ulong *", 
+          "name": "param_2"
+        }
+      ]
+    }, 
     "Calc": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -9767,6 +11352,22 @@
         {
           "type": "DelayType *", 
           "name": "param_1"
+        }
+      ]
+    }, 
+    "PlayerBondSystem_TryRemoveRelationship": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1ff4dfc", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 F3 03 00 AA 68 8E 46 B8 1F 05 00 71 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? C0 03 5F D6 E0 03 13 AA F4 03 01 AA ?? ?? ?? ?? 1F 04 00 31", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "ulong *", 
+          "name": "param_2"
         }
       ]
     }, 
@@ -9852,6 +11453,26 @@
         }
       ]
     }, 
+    "RelationshipManager_SetRelationBit": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x212a1b4", 
+      "signature": "09 B0 43 B9 3F 05 00 71 ?? ?? ?? ?? ?? ?? ?? ?? E8 03 01 AA ?? ?? ?? ?? 08 2D 40 29 E1 03 1F AA 0C DC 41 F9 ?? ?? ?? ?? ?? ?? ?? ?? 4E 01 40 B9 DF 01 0B 6B 4D 05 40 F9 6E 81 9F 1A ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "int *", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "uint", 
+          "name": "param_3"
+        }
+      ]
+    }, 
     "DeleteDirectoryRecursively": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -9873,6 +11494,22 @@
         {
           "type": "long", 
           "name": "param_1"
+        }
+      ]
+    }, 
+    "SaveRelationRootParameters": {
+      "return_type": "ulong", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1c65cc8", 
+      "signature": "FF 83 01 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 83 00 91 F3 03 01 AA F4 03 00 AA ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 08 39 01 91 ?? ?? ?? ?? F7 43 00 91 E1 03 00 91 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined8 *", 
+          "name": "param_2"
         }
       ]
     }, 
@@ -10099,6 +11736,26 @@
       "signature": "", 
       "params": []
     }, 
+    "UpdateAskPartnerOtherStateTick": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1afbe64", 
+      "signature": "FF 03 03 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 03 02 91 08 24 40 B9 ?? ?? ?? ?? ?? ?? ?? ?? 09 0C 41 39 F3 03 00 AA B4 57 86 52 74 FA A4 72 ?? ?? ?? ?? 1F 01 00 71 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "undefined1[16]", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "float", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_3"
+        }
+      ]
+    }, 
     "IsVoiceValid": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -10151,6 +11808,22 @@
         }, 
         {
           "type": "Uid *", 
+          "name": "param_2"
+        }
+      ]
+    }, 
+    "PlayerBondSystem_NotifyBondStateChanged": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x17291e8", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? F5 03 00 AA ?? ?? ?? ?? A9 0E 41 B8 F4 03 01 AA F3 03 00 AA ?? ?? ?? ?? 3F 05 00 71 AA 22 3F 29 ?? ?? ?? ?? 69 12 40 F9", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "int *", 
           "name": "param_2"
         }
       ]
@@ -10278,6 +11951,38 @@
         }
       ]
     }, 
+    "RelationConfig_ExtractLoveCheckValue": {
+      "return_type": "byte", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x6b05c", 
+      "signature": "FF C3 00 D1 ?? ?? ?? ?? ?? ?? ?? ?? FD 43 00 91 F4 03 01 AA F3 03 00 AA E1 23 00 91 E0 03 14 AA ?? ?? ?? ?? ?? ?? ?? ?? 88 32 40 39 1F 4D 03 71 ?? ?? ?? ?? 80 0A 40 B9 73 06 40 F9 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined8 *", 
+          "name": "param_2"
+        }
+      ]
+    }, 
+    "RelationMatrix_GetExistingType": {
+      "return_type": "undefined4", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x520fa0", 
+      "signature": "09 04 40 B9 ?? ?? ?? ?? FF 83 00 D1 ?? ?? ?? ?? FD 43 00 91 ?? ?? ?? ?? 08 E1 1D 91 ?? ?? ?? ?? 6A 05 40 F9 ?? ?? ?? ?? 6D 01 40 B9 BF 01 09 6B 0E 00 40 B9 2B 81 9F 1A 4C 51 2B 8B 8C 05 40 B9", 
+      "params": [
+        {
+          "type": "int *", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "int *", 
+          "name": "param_2"
+        }
+      ]
+    }, 
     "DummyFunc_7100559a34": {
       "return_type": "undefined", 
       "calling_convention": "__cdecl", 
@@ -10335,6 +12040,18 @@
       "address_offset": "0x53ef000", 
       "signature": "", 
       "params": []
+    }, 
+    "RelationConfig_GetParent": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1c35ae0", 
+      "signature": "FF 83 00 D1 ?? ?? ?? ?? FD 43 00 91 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 08 00 40 F9 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 02 01 40 F9 FF 83 00 91 40 00 1F D6", 
+      "params": [
+        {
+          "type": "long *", 
+          "name": "param_1"
+        }
+      ]
     }, 
     "VibrationMixer": {
       "return_type": "undefined", 
@@ -10533,6 +12250,46 @@
         {
           "type": "LightMessageQueueType *", 
           "name": "param_2"
+        }
+      ]
+    }, 
+    "Event_PresentReaction_ComputeSatisfaction": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1c99218", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FF C3 1B D1 ?? ?? ?? ?? F3 03 00 AA ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? F5 06 49 F9 69 8E 40 B9 ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
         }
       ]
     }, 
@@ -11298,6 +13055,46 @@
       "signature": "", 
       "params": []
     }, 
+    "Event_LevelUpPhrase_Grant": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x2001b88", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FF 03 1B D1 08 24 40 B9 F4 03 00 AA 13 A0 01 91 09 0C 41 39 1F 01 00 71 24 09 40 7A ?? ?? ?? ?? E0 03 13 AA", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }
+      ]
+    }, 
     "SetSplitterMixVolume": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -11431,6 +13228,66 @@
         {
           "type": "typedef GammaType undefined", 
           "name": "param_2"
+        }
+      ]
+    }, 
+    "GetPetitPersonalityLabel": {
+      "return_type": "bool", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1a66f48", 
+      "signature": "FF 03 02 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FD 43 01 91 F3 03 01 AA ?? ?? ?? ?? 08 08 40 F9 01 09 40 F9 29 00 40 39 ?? ?? ?? ?? 74 02 40 F9 9F 02 01 EB ?? ?? ?? ?? E9 03 1F AA 3F 01 50 F1", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined8 *", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }
+      ]
+    }, 
+    "Update_Is_RelationshipsStateTick": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1af4ec8", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 FF 03 1C D1 08 24 40 B9 F3 03 00 AA 1F 01 00 71 09 0C 41 39 24 09 40 7A ?? ?? ?? ?? ?? ?? ?? ?? A1 57 86 52 61 FA A4 72 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "undefined1[16]", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "float", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_3"
         }
       ]
     }, 
@@ -11771,6 +13628,46 @@
         }
       ]
     }, 
+    "Event_LevelUpGoods_Grant": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x20016c0", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FF 03 1B D1 08 24 40 B9 F4 03 00 AA 13 A0 01 91 09 0C 41 39 1F 01 00 71 24 09 40 7A ?? ?? ?? ?? E0 03 13 AA", 
+      "params": [
+        {
+          "type": "long", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }
+      ]
+    }, 
     "GetNativeWindow": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -11967,6 +13864,58 @@
         }
       ]
     }, 
+    "GameMain_InitializeSceneTransition": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x4a3fec", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FF 03 24 D1 ?? ?? ?? ?? F4 03 00 AA ?? ?? ?? ?? D8 32 81 52 18 61 A8 72 ?? ?? ?? ?? F5 E0 95 52 95 57 A7 72", 
+      "params": [
+        {
+          "type": "undefined1[16]", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "undefined1[16]", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "float", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "ulong * *", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "uint *", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_9"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_10"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_11"
+        }
+      ]
+    }, 
     "AcquireGlyphmap": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -12091,6 +14040,54 @@
         }
       ]
     }, 
+    "UpdatePersonalityCompleteState": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1af7dac", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FF C3 1B D1 08 24 40 B9 F3 03 00 AA 1F 01 00 71 09 0C 41 39 24 09 40 7A ?? ?? ?? ?? 68 B6 4B B9 1F 09 00 71", 
+      "params": [
+        {
+          "type": "undefined1[16]", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "float", 
+          "name": "param_2"
+        }, 
+        {
+          "type": "long", 
+          "name": "param_3"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_4"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_5"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_6"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_7"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_8"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_9"
+        }, 
+        {
+          "type": "undefined8", 
+          "name": "param_10"
+        }
+      ]
+    }, 
     "GetImageMemoryRequirement": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -12127,18 +14124,6 @@
         }
       ]
     }, 
-    "CheckMiiLoveCompatibility": {
-      "return_type": "undefined4", 
-      "calling_convention": "__cdecl", 
-      "address_offset": "0x6b004", 
-      "signature": "FF 03 01 D1 ?? ?? ?? ?? FD C3 00 91 ?? ?? ?? ?? 08 C1 30 91 ?? ?? ?? ?? A9 13 00 D1 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? E0 63 00 91 E1 23 00 91 ?? ?? ?? ??", 
-      "params": [
-        {
-          "type": "long", 
-          "name": "param_1"
-        }
-      ]
-    }, 
     "GetState": {
       "return_type": "undefined", 
       "calling_convention": "unknown", 
@@ -12170,6 +14155,22 @@
         }, 
         {
           "type": "/Demangler/nn/TimeSpan\npack(disabled)\nStructure TimeSpan {\n}\nLength: 0 Alignment: 1\n", 
+          "name": "param_2"
+        }
+      ]
+    }, 
+    "RelationTransition_Attempt_Standard": {
+      "return_type": "undefined", 
+      "calling_convention": "__cdecl", 
+      "address_offset": "0x1d19ba0", 
+      "signature": "?? ?? ?? ?? ?? ?? ?? ?? FD 03 00 91 E2 03 1F 2A F3 03 01 AA F4 03 00 AA ?? ?? ?? ?? E2 03 00 2A E0 03 14 AA E1 03 13 AA ?? ?? ?? ?? 23 00 80 52 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??", 
+      "params": [
+        {
+          "type": "int *", 
+          "name": "param_1"
+        }, 
+        {
+          "type": "int *", 
           "name": "param_2"
         }
       ]
