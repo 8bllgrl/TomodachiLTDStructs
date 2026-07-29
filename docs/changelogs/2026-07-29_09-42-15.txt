@@ -1,0 +1,28 @@
+- mii to mii love checks
+- mii to mii love compatibility
+- GroupActionItem_ReadMii0ToMii1LoveCheckFlag / GroupActionItem_ReadMii1ToMii0LoveCheckFlag -- Acts as a config-field reader rather than a compatibility calculator, retrieving boolean flags from group action records without evaluating actor data, personality, or meters.
+- GroupActionTable_SelectWeightedReaction 
+-Iterates the RelationGroupActionTable item array, filters entries using RelationConditionId and love check flags, and performs a weighted random (xorshift PRNG) selection to output dialogue or action strings.
+i[- [F[B[C[Ci[2~t[B[BRelationCondition_Evaluate
+ - Acts as a generic strategy-pattern condition evaluator that resolves Mii actors by ID, constructs condition objects via a factory, and evaluates them via vtable dispatch.
+- RelationMatrix_GetExistingType
+-  RelationMatrix_GetPairField_Type
+- RelationMatrix_GetPairField_BloodFlag
+- those three functions are Pairwise Relationship Record and Blood Relation Lookups
+- Resolves island slot indices (0–69) against a flat symmetric matrix for 2415 pairs to query existing relationship types, retrieve directional flags, and evaluate blood-relation/incest-block exclusion criteria.
+- 70 miis in total
+- RelationType_ResolveAndStore
+Handles the transition and storage write path when establishing or advancing relationship states between unrelated or eligible Mii pairs.
+[A[A- Handles the transition and storage write path when establishing or advancing relationship states between unrelated or eligible Mii pairs.
+
+- It is true that I have found these functions with a high-ish probability of them being correctly linked to Mii relations, however since my emulated save has 1 Mii currently, I have not tested any of these functions in GDB to confirm if they are indeed relationship related or if I have renamed a bunch of bullshit.
+
+That is completely on me if this is a bunch of bullshit, but the math seems to point to how the relationships really do work in the game so I have confidence it is not entirely bullshittery.
+
+Interestingly, no personality-related information has been used (unlike taste, which used 0-3 which is an array of 4 personality types)
+
+
+------------------------------------------
+Files changed:
+ data/findings.json | 2185 +++++++++++++++++++++++++++++++++++++++++++++++++---
+ 1 file changed, 2093 insertions(+), 92 deletions(-)
