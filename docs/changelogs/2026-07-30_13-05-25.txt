@@ -1,0 +1,165 @@
+I have not tested these against GDB stub yet. this is a batch of static analysis. i am on the pursuit of looking for how mii romance is calculated, whether or not it uses personality types. for certain I have found that it uses byml in some way, and that it does test against miis (it limits them to 70, which corresponds neatly with the ingame known mii limit cap.)
+
+important discoveries:
+
+- `g_MiiLookupTable`: This global registry structure manages resident slots (typically up to $0x46$ or 70 active slots).
+- The relationship system (”RelationSystem”) operates on a structured pairing matrix rather than independent actor properties.
+- Triangular Matrix Indexing: Because relationship states are mutual (e.g., how Mii A relates to Mii B), the engine uses triangular matrix indexing algorithms to map pairs (A, B) into a single flat array without duplication.
+- When any attribute changes, **`RelationSystem_RevalidateAllPairsForMii`** steps through every active bond tied to that resident.
+- RelationSystem_CheckExistingPairConstraint checks if mii 1 and mii 2 fit, computes a combined metric or accumulation score and enforces a hard numerical boundary, If the sum exceeds 5, the engine allows exclusive relationship triggers (such as family exclusion guards, romantic pairing checks, or close-friend event gates).
+- Whenever gameplay logic, save data, or packet syncs alter a Mii, these routines extract the Mii ID and instantly fire **`RelationSystem_OnMiiAttributeChanged_Revalidate`**.
+- **“Type-6” Subsystem Categorization:** Special classifications (like “Type 6” handled in `ResidentRegistry_RegisterOrUpdateIncomingResident`) govern specialized social structures such as extended household registries or relative caps enforced by strict population limits
+    - "Type 6" refers to an internal enumerated category or classification ID used by the relationship and resident registry subsystems to govern specialized social bonds and data arrays. it appears across the decompiled functions (such as ResidentRegistry_RegisterOrUpdateIncomingResident and ResidentRegistry_DispatchIncomingPacket)
+- The game categorizes different kinds of relationships, resident entries, and connection data into distinct numerical types.
+    - Lower or standard types typically handle general acquaintances or standard friendship tiers, Type 6 is reserved for a specific structural subset.
+    - Think of Type 6 as a VIP guest list or a special category folder in the game's code.
+    - The game uses "Type 6" to manage special relationships (like family members or roommates living together).
+- Notably, “Meter” is a term that shows up in mii-to-mii relationships, which implies there is a sort of points counter that is assessed before letting something succeed.
+    - Functions like `RelationSystem_CheckExistingPairConstraint` evaluate these meter scores against hard thresholds (e.g., checking if `score > 5` or if the score falls into specific ranges).
+- everything i have reverse-engineered so far (RelationSystem, ResidentRegistry, and MiiManager) deals purely with abstract data structures, matrices, and ID lookups (such as looking up Mii IDs in slot arrays, checking adult flags, and evaluating index thresholds)
+- No evidence to support certain personalities get along more than others yet, would have to look into byml files to confirm. unsure which byml files to observe.
+
+function renaming list:
+
+- **`GetScriptPropertyString`**
+- **`InitializeVibrationDevice`**
+- **`GetScriptPropertyActorHandle`**
+- **`InitializeProposalStateChart`**
+- **`TeardownProposalDialogueSequence`**
+- **`Mii_GetSecondaryReferencePtr`**
+- **`AddRelationMeterAction`**
+- **`DeserializeTroubleEventParam_LoadEventSchema`**
+- **`GetAudioRendererConfigWorkBufferSize`**
+- **`ResolveGanGanHighlightNode`**
+- **`GetScriptPropertyBool`**
+- **`Mii_CheckExclusionStateAndEvaluateRelationship`**
+- **`DemoStage_SetupRelationshipEventPresentation`**
+- **`ResidentRegistry_DispatchIncomingPacket`**
+- **`LoadAndFilterTroubleEvents`**
+- **`AcquireSubMix`**
+- **`Mii_CheckAffectionAndDispatchAction`**
+- **`ReleaseLoverRelationshipTelemetryInstance`**
+- **`MiiData_BindDemoString`**
+- **`DummyReturn?`**
+- **`ResolveMiiClothingStyle`**
+- **`Cached_SetIfChanged_TlsInvalidate`**
+- **`Mii_IterateAndEvaluateRelationshipPair`**
+- **`GroupActionTableItem_DeserializeConditionAndRate`**
+- **`RegisterProposalParticipantMii`**
+- **`RelationGraphScreen_RenderPairConnector`**
+- **`IsValid`**
+- **`UpdateProposalCameraOrientation`**
+- **`MiiActor_ConstructDefaultSentinel`**
+- **`ReferSymbol`**
+- **`GroupActionCondition_HasAnyFieldChanged_LiveValues`**
+- **`Mii_CanInitiateLoveOrConfessionCheck`**
+- **`LogPlaylogIslandInfoDetailTelemetry`**
+- **`UpdateProposalStatus`**
+- **`InitProposalDialogueSequence`**
+- **`GetProposalRecordFromTable`**
+- **`GetScriptPropertyFloat`**
+- **`GetDefaultProposalActorInstance`**
+- **`UpdateProposalActorTransformSelf`**
+- **`ResetSearchParameters?`**
+- **`ApplyProposalFacingAngle`**
+- **`Mii_CheckBloodRelationTypeInPartnerList`**
+- **`ClearMiiSoundComponent`**
+- **`GroupActionCondition_SerializeToByml_TargetVariant`**
+- **`LuggageMiiProfile_PopulateDisplayFields`**
+- **`GetProposalManagerInstance`**
+- **`MiiManager_CommitSingleResidentStateChange`**
+- **`SetupProposalDialogueState`**
+- **`GetActiveProposalPrimaryMiiId`**
+- **`RelationSystem_FinalizePairUpdate`**
+- **`DemoStage_SetupLoveDemoPresentation`**
+- **`RelationshipsScreen_BuildPairIconAndNameBindings`**
+- **`GetScriptPropertyInt`**
+- **`ResidentRegistry_RegisterOrUpdateIncomingResident`**
+- **`TrackTelemetry_FocusLeading`**
+- **`EventListener_UpdateStateAndDispatchCallbacks`**
+- **`DemoStage_SetupFerrisWheelDateScene`**
+- **`GroupActionCondition_HasAnyFieldChanged`**
+- **`Mii_IsRelationshipStateBelowMinimum`**
+- **`DemoStage_ConfigureLoveDemoParameters`**
+- **`ResidentRegistry_BatchProcessIncomingPackets`**
+- **`Mii_CheckRelationshipNodeCompatibility`**
+- **`CopyProposalEventString`**
+- **`ResidentRegistry_QueueAndFlushPendingBatch`**
+- **`Mii_ValidateSocialMatrixRelationship`**
+- **`LogPlaylogAndTelemetry`**
+- **`RelationReaction_DeserializeFromByml`**
+- **`GetPostDemoChangeLocationType`**
+- **`GetProposalDialogueMiiId`**
+- **`RelationParam_GetAddress_Mii0ToMii1GenerateLoveCheck`**
+- **`ResolveQuantityEnum`**
+- **`MiiManager_CommitPairStateChange`**
+- **`Validate_ProposalOutcome`**
+- **`TroubleConfession_DeserializeFromByml`**
+- **`TickProposalDialogueSequence`**
+- **`Mii_EvaluateAffectionOrGetStatus`**
+- **`CalculateProposalActorFacingAngle`**
+- **`RelationMatrix_LookupByBloodType`**
+- **`RelationSystem_CheckExistingPairConstraint`**
+- **`GetPairDetailRelationMessage`**
+- **`MiiManager_UpdateResidentData`**
+- **`MiiEventListener_OnResidentStateEvent`**
+- **`Mii_CheckCooldownAndEvaluateRelationship`**
+- **`GroupActionCondition_DeserializeFromByml`**
+- **`RelationGraphScreen_RegisterConnectorTypeNodes`**
+- **`LifeEventRegistry_RegisterAllHandlers`**
+- **`GameplayEvent_OnUpdateOrEnd_Basic`**
+- **`IsMiiAffectionBelowThreshold_CheckRelationshipStatus`**
+- **`MiiManager_CommitResidentStateChange`**
+- **`RelationConditionNode_Evaluate_BloodTypeMeterGate`**
+- **`PopulateLoverRelationshipTelemetry`**
+- **`ReleaseSemaphore`**
+- **`GetActiveProposalPrimaryMiiActor`**
+- **`GetLoverRelationshipTelemetryInstance?`**
+- **`DemoStage_HandleProposalConfessionOutcome`**
+- **`GetRelationStateMessage`**
+- **`GroupActionCondition_DeserializeFromByml_TargetVariant`**
+- **`RelationConditionNode_BindProperties_BloodTypeMeterGate`**
+- **`Mii_ValidateAffectionThresholdAndSpecialState`**
+- **`Mii_EvaluateRelationshipAndRollRandomChance`**
+
+- memory and pointer handling utilities such as **`Mii_GetSecondaryReferencePtr`**, **`GetScriptPropertyActorHandle`**
+- property evaluators and symbol reference tools like **`GetScriptPropertyString`**, **`GetScriptPropertyBool`**, **`GetScriptPropertyFloat`**, **`GetScriptPropertyInt`**
+- validation and utility helpers such as **`ResolveQuantityEnum`**, **`ResetSearchParameters?`**
+
+### **Resident & Mii Management**
+
+- resident registry and state management functions, including **`ResidentRegistry_RegisterOrUpdateIncomingResident`**, **`ResidentRegistry_DispatchIncomingPacket`**, **`ResidentRegistry_BatchProcessIncomingPackets`**, and **`ResidentRegistry_QueueAndFlushPendingBatch`**.
+- tracking and update mechanisms for residents, such as **`MiiManager_UpdateResidentData`**, **`MiiManager_CommitResidentStateChange`**, **`MiiManager_CommitSingleResidentStateChange`**, and **`MiiManager_CommitPairStateChange`**.
+- Mii-specific utilities and visual configurations, including **`MiiActor_ConstructDefaultSentinel`**, **`ResolveMiiClothingStyle`**, **`ClearMiiSoundComponent`**, **`MiiData_BindDemoString`**, **`LuggageMiiProfile_PopulateDisplayFields`**, and **`MiiEventListener_OnResidentStateEvent`**.
+
+### **Relationships, Social Matrix, & Meter Logic**
+
+- relationship evaluation and social matrix validation tools, such as **`Mii_CheckAffectionAndDispatchAction`**, **`Mii_CheckExclusionStateAndEvaluateRelationship`**, **`Mii_CheckCooldownAndEvaluateRelationship`**, **`Mii_IterateAndEvaluateRelationshipPair`**, **`Mii_CheckRelationshipNodeCompatibility`**, **`Mii_ValidateSocialMatrixRelationship`**, and **`Mii_ValidateAffectionThresholdAndSpecialState`**.
+- blood relation and compatibility checks, including **`Mii_CheckBloodRelationTypeInPartnerList`**, **`RelationMatrix_LookupByBloodType`**, **`RelationParam_GetAddress_Mii0ToMii1GenerateLoveCheck`**, and **`Mii_CanInitiateLoveOrConfessionCheck`**.
+- affection threshold and meter gate logic, such as **`IsMiiAffectionBelowThreshold_CheckRelationshipStatus`**, **`Mii_IsRelationshipStateBelowMinimum`**, **`Mii_EvaluateAffectionOrGetStatus`**, **`Mii_EvaluateRelationshipAndRollRandomChance`**, **`AddRelationMeterAction`**, **`RelationConditionNode_Evaluate_BloodTypeMeterGate`**, and **`RelationConditionNode_BindProperties_BloodTypeMeterGate`**.
+- relationship state and pair updates, including **`RelationSystem_FinalizePairUpdate`**, **`RelationSystem_CheckExistingPairConstraint`**, **`GetPairDetailRelationMessage`**, **`GetRelationStateMessage`**, **`RelationshipsScreen_BuildPairIconAndNameBindings`**, and **`RelationGraphScreen_RenderPairConnector`**, **`RelationGraphScreen_RegisterConnectorTypeNodes`**.
+
+### **Proposals, Events, & Demo Stages**
+
+- proposal flow and management functions, including **`GetProposalManagerInstance`**, **`GetProposalRecordFromTable`**, **`GetDefaultProposalActorInstance`**, **`GetActiveProposalPrimaryMiiId`**, **`GetActiveProposalPrimaryMiiActor`**, **`GetProposalDialogueMiiId`**, and **`Validate_ProposalOutcome`**.
+- proposal state, camera, and transformation handlers such as **`InitializeProposalStateChart`**, **`UpdateProposalStatus`**, **`UpdateProposalCameraOrientation`**, **`UpdateProposalActorTransformSelf`**, **`ApplyProposalFacingAngle`**, **`CalculateProposalActorFacingAngle`**, and **`RegisterProposalParticipantMii`**.
+- proposal dialogue sequence handlers, including **`InitProposalDialogueSequence`**, **`TeardownProposalDialogueSequence`**, **`SetupProposalDialogueState`**, **`TickProposalDialogueSequence`**, and **`CopyProposalEventString`**.
+- demo stage (cutscene) presentation and event configuration methods, such as **`DemoStage_SetupRelationshipEventPresentation`**, **`DemoStage_SetupLoveDemoPresentation`**, **`DemoStage_SetupFerrisWheelDateScene`**, **`DemoStage_ConfigureLoveDemoParameters`**, **`DemoStage_HandleProposalConfessionOutcome`**, and **`GetPostDemoChangeLocationType`**.
+
+### **Trouble Events, Conditions, & Deserialization**
+
+- event loading and registry handlers, including **`LifeEventRegistry_RegisterAllHandlers`**, **`LoadAndFilterTroubleEvents`**, **`DeserializeTroubleEventParam_LoadEventSchema`**, and **`GameplayEvent_OnUpdateOrEnd_Basic`**.
+- .byml deserialization tools for events and reactions, such as **`RelationReaction_DeserializeFromByml`** and **`TroubleConfession_DeserializeFromByml`**.
+- group action condition and table item deserializers, including **`GroupActionTableItem_DeserializeConditionAndRate`**, **`GroupActionCondition_DeserializeFromByml`**, **`GroupActionCondition_DeserializeFromByml_TargetVariant`**, **`GroupActionCondition_SerializeToByml_TargetVariant`**, **`GroupActionCondition_HasAnyFieldChanged`**, and **`GroupActionCondition_HasAnyFieldChanged_LiveValues`**.
+- UI and highlight node solvers like **`ResolveGanGanHighlightNode`** and **`EventListener_UpdateStateAndDispatchCallbacks`**.
+
+### **Telemetry & Audio Subsystem**
+
+- more telemetry logging functions, including **`LogPlaylogIslandInfoDetailTelemetry`**, **`LogPlaylogAndTelemetry`**, **`TrackTelemetry_FocusLeading`**, **`PopulateLoverRelationshipTelemetry`**, **`ReleaseLoverRelationshipTelemetryInstance`**, and **`GetLoverRelationshipTelemetryInstance?`**.
+- audio mixing and sub-mix configuration tools, including **`AcquireSubMix`**.
+
+
+------------------------------------------
+Files changed:
+ data/findings.json | 2361 ++++++++++++++++++++++++++++++++++++++++++++++++----
+ 1 file changed, 2210 insertions(+), 151 deletions(-)
