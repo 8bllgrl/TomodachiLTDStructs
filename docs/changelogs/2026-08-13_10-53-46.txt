@@ -1,0 +1,11 @@
+- inspired by https://github.com/aers/FFXIVClientStructs/tree/main/ida
+- remove findings.json
+- it makes import obsolete for now
+eof
+
+------------------------------------------
+Files changed:
+ data/data.yml                           | 2064 +++++++++++++++++++++++++++++++
+ docs/changelogs/2026-08-13_10-31-16.txt |    6 +
+ scripts/export_findings.py              |  166 +--
+ 3 files changed, 2102 insertions(+), 134 deletions(-)

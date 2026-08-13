@@ -1,0 +1,6 @@
+- remove tracking for findings.json for now
+
+------------------------------------------
+Files changed:
+ data/findings.json | 4767461 -------------------------------------------------
+ 1 file changed, 4767461 deletions(-)
